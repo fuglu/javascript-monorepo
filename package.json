@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "lerna bootstrap",
+    "test": "jest"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
