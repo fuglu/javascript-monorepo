@@ -1,7 +1,7 @@
 import React from 'react';
 
 const style = {
-	border: '1px solid gold',
+	border: '2px solid gold',
 	borderRadius: '90%',
 	padding: '10px',
 };
