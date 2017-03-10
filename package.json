@@ -1,10 +1,11 @@
 {
   "scripts": {
     "create-react-app": "cd apps && create-react-app --",
-    "lint": "eslint .",
+    "lint": "eslint packages",
     "postinstall": "lerna bootstrap",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest"
+    "release": "npm run lint && npm run test && lerna publish",
+    "test": "jest packages"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.35.3",
