@@ -1,13 +1,15 @@
 {
+  "name": "react-monorepo",
   "scripts": {
-    "create-react-app": "cd apps && create-react-app --",
-    "lint": "eslint packages",
-    "postinstall": "lerna bootstrap",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "create-app": "cd apps && create-react-app --",
+    "create-component": "create-react-component --scope org --base-path packages --template-path package-template --",
+    "lint": "eslint --ext .js --ext .jsx packages",
     "release": "npm run lint && npm run test && lerna publish",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest packages"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@fuglu/create-react-component": "^1.0.1",
     "@kadira/storybook": "^2.35.3",
     "create-react-app": "^1.3.0",
     "eslint": "^3.17.1",
@@ -19,5 +21,17 @@
     "lerna": "2.0.0-beta.38",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb"
+    ],
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "rules": {
+      "import/no-extraneous-dependencies": ["off"]
+    }
   }
 }
