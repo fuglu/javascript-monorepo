@@ -4,6 +4,7 @@
     "create-app": "cd websites && create-react-app --",
     "create-component": "create-react-component --scope org --base-path components --template-path component-template --",
     "lint": "eslint --ext .js --ext .jsx components",
+    "postinstall": "lerna bootstrap",
     "release": "npm run lint && npm run test && lerna publish",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest components"
