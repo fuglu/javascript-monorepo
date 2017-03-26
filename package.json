@@ -1,5 +1,5 @@
 {
-  "name": "react-monorepo",
+  "name": "javascript-monorepo",
   "scripts": {
     "create-app": "cd websites && create-react-app --",
     "create-component": "create-react-component --scope org --base-path components --template-path component-template --",
