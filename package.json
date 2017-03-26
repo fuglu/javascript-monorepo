@@ -1,12 +1,12 @@
 {
   "name": "react-monorepo",
   "scripts": {
-    "create-app": "cd apps && create-react-app --",
-    "create-component": "create-react-component --scope org --base-path packages --template-path package-template --",
-    "lint": "eslint --ext .js --ext .jsx packages",
+    "create-app": "cd websites && create-react-app --",
+    "create-component": "create-react-component --scope org --base-path components --template-path component-template --",
+    "lint": "eslint --ext .js --ext .jsx components",
     "release": "npm run lint && npm run test && lerna publish",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest packages"
+    "test": "jest components"
   },
   "dependencies": {
     "@fuglu/create-react-component": "^1.0.1",
