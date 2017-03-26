@@ -1,5 +1,5 @@
-react-monorepo
-==============
+js-monorepo
+===========
 
 This is a proof of concept :construction:<br>
 It might eat your :cat2:
