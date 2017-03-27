@@ -1,0 +1,34 @@
+{
+  "name": "@org/react-header",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "prepublish": "npm run build"
+  },
+  "babel": {
+    "ignore": [
+      "**/*.stories.js*",
+      "**/*.test.js*"
+    ],
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "@org/react-avatar": "^1.0.0",
+    "@org/react-button": "^1.0.0",
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.2.1",
+    "babel-preset-react": "^6.23.0"
+  },
+  "license": "ISC"
+}
