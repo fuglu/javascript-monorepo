@@ -1,9 +1,6 @@
 javascript-monorepo
 ===================
 
-This is a proof of concept :construction:<br>
-It might eat your :cat2:
-
 Usage
 -----
 
@@ -12,43 +9,46 @@ Usage
 | `yarn create-component` | `create-react-component` | Create a new component  |
 | `yarn create-app`       | `create-react-app`       | Create a new app        |
 | `yarn lint`             | `eslint`                 | Static code analysis    |
-| `yarn test`             | `jest`                   | Run test suite          |
-| `yarn storybook`        | `react-storybook`        | Start storybook         |
 | `yarn release`          | `lerna`                  | Update/release packages |
+| `yarn storybook`        | `react-storybook`        | Start storybook         |
+| `yarn test`             | `jest`                   | Run test suite          |
+| `yarn updated`          | `lerna`                  | See what changed        |
 
 
 Example workflow
 ----------------
 
 ```bash
-# Adding a new component
-yarn create-component react-example-component
-yarn storybook
-editor components/react-example-component/src/*.jsx
-git commit -am "Add react-example-component"
-git push origin master
+# We should initialize the repository
+yarn
+
+# Let's add a new component called react-button
+yarn create-component react-button
+yarn storybook &
+editor components/react-button/src/*.jsx
+git commit -am "Add react-button"
 yarn release
 
-# Updating an existing component
-yarn storybook
-editor components/react-example-component/src/*.jsx
-git commit -am "Update react-example-component"
-git push origin master
-yarn release
-
-# Adding a new website
+# And now let's add a new website called www.example.com
 yarn create-app www.example.com
 cd websites/www.example.com
-yarn start
-editor src/App.js
-git commit -am "Add www.example.com"
+yarn start &
+cd ../..
+editor websites/www.example.com/src/App.js
+git commit -am "Initial www.example.com proof of concept"
 git push origin master
 
-# Using your component within a website
-cd websites/www.example.com
-yarn add react-example-component
-yarn start
+# We should use our react-button here
+yarn add react-button
 editor src/App.js
-git commit -am "Add react-example-component to www.example.com"
+git commit -am "www.example.com: Add react-button"
 git push origin master
+
+# Now let's update our react-button
+cd ../..
+editor components/react-button/src/*.jsx
+git commit -am "react-button: Awesome new feature"
+yarn release
+
+# Repeat!
 ```
