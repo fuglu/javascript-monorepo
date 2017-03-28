@@ -1,0 +1,29 @@
+{
+  "name": "@org/react-headline",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "NODE_ENV=production babel src -d dist",
+    "prepublish": "npm run build"
+  },
+  "babel": {
+    "ignore": [
+      "**/*.stories.js*",
+      "**/*.test.js*"
+    ],
+    "presets": [
+      "react-app"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^15.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-react-app": "^2.2.0"
+  },
+  "license": "ISC"
+}
