@@ -2,12 +2,12 @@
   "name": "javascript-monorepo",
   "scripts": {
     "create-app": "cd websites && create-react-app --",
-    "create-component": "create-react-component --scope org --base-path components --template-path templates/component-template --",
-    "lint": "eslint --ext .js --ext .jsx components",
+    "create-component": "create-react-component --scope org --base-path packages --template-path templates/react-component-template --",
+    "lint": "eslint --ext .js --ext .jsx packages",
     "postinstall": "lerna bootstrap",
     "release": "npm run lint && npm run test && lerna publish",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest components",
+    "test": "jest packages",
     "updated": "lerna updated"
   },
   "dependencies": {

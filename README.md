@@ -25,7 +25,7 @@ yarn
 # Let's add a new component called react-button
 yarn create-component react-button
 yarn storybook &
-editor components/react-button/src/*.jsx
+editor packages/react-button/src/*.jsx
 git commit -am "Add react-button"
 yarn release
 
@@ -46,7 +46,7 @@ git push origin master
 
 # Now let's update our react-button
 cd ../..
-editor components/react-button/src/*.jsx
+editor packages/react-button/src/*.jsx
 git commit -am "react-button: Awesome new feature"
 yarn release
 
