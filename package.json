@@ -7,7 +7,8 @@
     "postinstall": "lerna bootstrap",
     "release": "npm run lint && npm run test && lerna publish",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest components"
+    "test": "jest components",
+    "updated": "lerna updated"
   },
   "dependencies": {
     "@fuglu/create-react-component": "^1.0.1",
