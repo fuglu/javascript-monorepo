@@ -1,6 +1,6 @@
 {
   "name": "@org/react-profile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
@@ -20,8 +20,8 @@
     "dist"
   ],
   "dependencies": {
-    "@org/react-avatar": "^1.0.0",
-    "@org/react-button": "^1.0.0",
+    "@org/react-avatar": "^1.0.1",
+    "@org/react-button": "^1.0.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
