@@ -5,8 +5,8 @@ You will need Node.js ([Mac](https://nodejs.org/en/download/current/) or [Linux]
 and [Yarn](https://yarnpkg.com/en/docs/install).
 
 
-Building a package from scratch
--------------------------------
+Build a package from scratch
+----------------------------
 
 ```bash
 # Create a new folder
@@ -35,8 +35,8 @@ npm publish
 ```
 
 
-Babel
------
+Add Babel
+---------
 
 ```bash
 # Maybe you want to use ECMAScript 2015 (ES6) and beyond
@@ -44,7 +44,7 @@ rm index.js
 mkdir src
 cat >> src/index.js << EOF
 export default () => {
-  console.log('Hello world');
+  console.log('The answer is 42');
 };
 EOF
 
@@ -79,7 +79,7 @@ node << EOF
 var log = require('./dist/index.js').default;
 log();
 EOF
-# > Hello world
+# > The answer is 42
 
 # Edit your package.json and set
 #   "main": "dist/index.js",
@@ -93,4 +93,32 @@ npm version patch
 
 # Publish the new version
 npm publish
+```
+
+Use your package everywhere
+---------------------------
+
+```bash
+# Install create-react-app
+npm install -g create-react-app
+
+# Create a new app
+cd /tmp
+create-react-app demo-website
+cd demo-website/
+npm install --save @org/demo-package
+
+# Edit the src/App.js and import your package
+#   import log from '@org/demo-package';
+# and add a componentWillMount function to the class
+#   componentWillMount() {
+#     log();
+#   }
+editor src/App.js
+
+# Now start your website
+npm start
+
+# Have a look at the console
+# > The answer is 42
 ```
