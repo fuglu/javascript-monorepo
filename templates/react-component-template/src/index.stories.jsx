@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import ReactComponentTemplate from './index';
+import Component from './';
 
-storiesOf('ReactComponentTemplate', module)
-	.add('Hello world', () => (
-		<ReactComponentTemplate>Hello world</ReactComponentTemplate>
-	));
+storiesOf('Component', module)
+  .add('default', () => (
+    <Component />
+  ));
