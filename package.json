@@ -1,6 +1,7 @@
 {
   "name": "javascript-monorepo",
   "scripts": {
+    "cleanup": "lerna run cleanup && lerna clean",
     "create-app": "cd websites && create-react-app --",
     "create-component": "create-react-component --scope org --base-path packages --template-path templates/react-component-template --",
     "diff": "lerna diff --",

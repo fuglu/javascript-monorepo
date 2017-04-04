@@ -4,14 +4,17 @@ javascript-monorepo
 Usage
 -----
 
-| Alias                   | Tool                     | Description             |
-|-------------------------|--------------------------|-------------------------|
-| `yarn create-component` | `create-react-component` | Create a new component  |
-| `yarn create-app`       | `create-react-app`       | Create a new app        |
-| `yarn lint`             | `eslint`                 | Static code analysis    |
-| `yarn release`          | `lerna`                  | Update/release packages |
-| `yarn storybook`        | `react-storybook`        | Start storybook         |
-| `yarn updated`          | `lerna`                  | See what changed        |
+| Alias                   | Tool                     | Description                     |
+|-------------------------|--------------------------|---------------------------------|
+| `yarn cleanup`          | `lerna`                  | Clean all packages              |
+| `yarn create-component` | `create-react-component` | Create a new component          |
+| `yarn create-app`       | `create-react-app`       | Create a new app                |
+| `yarn diff`             | `lerna`                  | View changes since last release |
+| `yarn lint`             | `eslint`                 | Static code analysis            |
+| `yarn release`          | `lerna`                  | Update/release packages         |
+| `yarn storybook`        | `react-storybook`        | Start storybook                 |
+| `yarn test`             | `jest`                   | Run all tests                   |
+| `yarn updated`          | `lerna`                  | List updated packages           |
 
 
 Example workflow
@@ -23,7 +26,7 @@ yarn
 
 # Let's add a new component called react-button
 yarn create-component react-button
-yarn storybook &
+yarn storybook
 editor packages/react-button/src/*.jsx
 git commit -am "Add react-button"
 yarn release
