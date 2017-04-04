@@ -6,8 +6,9 @@
     "diff": "lerna diff --",
     "lint": "eslint --ext .js --ext .jsx packages",
     "postinstall": "lerna bootstrap",
-    "release": "yarn lint && lerna publish",
+    "release": "yarn lint && yarn test && lerna publish",
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "test": "lerna run test",
     "updated": "lerna updated"
   },
   "dependencies": {
