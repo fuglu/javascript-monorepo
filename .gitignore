@@ -1,10 +1,11 @@
-node_modules
-dist
+*.swp
 .DS_Store
 .env
+.tags
+.yarnclean
+dist
+node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-*.swp
-.tags
 yarn.lock
