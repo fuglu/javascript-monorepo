@@ -3,6 +3,7 @@
   "scripts": {
     "create-app": "cd websites && create-react-app --",
     "create-component": "create-react-component --scope org --base-path packages --template-path templates/react-component-template --",
+    "diff": "lerna diff --",
     "lint": "eslint --ext .js --ext .jsx packages",
     "postinstall": "lerna bootstrap",
     "release": "yarn lint && lerna publish",
