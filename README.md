@@ -11,7 +11,6 @@ Usage
 | `yarn lint`             | `eslint`                 | Static code analysis    |
 | `yarn release`          | `lerna`                  | Update/release packages |
 | `yarn storybook`        | `react-storybook`        | Start storybook         |
-| `yarn test`             | `jest`                   | Run test suite          |
 | `yarn updated`          | `lerna`                  | See what changed        |
 
 

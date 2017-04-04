@@ -1,16 +1,21 @@
 import React from 'react';
 
-class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const style = {
+	border: '1px solid gold',
+	display: 'inline-block',
+	padding: '10px',
+	borderRadius: '4px',
+	textAlign: 'center',
+};
 
-  render() {
-    return (
-      <div />
-    );
-  }
-}
+const Component = props => (
+	<div style={style}>
+		{props.children}
+	</div>
+);
+
+Component.propTypes = {
+	children: React.PropTypes.node.isRequired,
+};
 
 export default Component;

@@ -3,32 +3,25 @@
   "version": "1.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src -d dist",
-    "prepublish": "npm run build"
+    "build": "NODE_ENV=production babel src -d dist",
+    "prepublish": "yarn test && yarn build",
+    "test": "NODE_ENV=test jest src"
   },
-  "babel": {
-    "ignore": [
-      "**/*.stories.js*",
-      "**/*.test.js*"
-    ],
-    "presets": [
-      "env",
-      "react"
-    ]
-  },
-  "files": [
-    "dist"
-  ],
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "@org/react-avatar": "^1.0.1",
+    "@org/react-button": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0"
   },
   "devDependencies": {
-    "@org/react-avatar": "^1.0.1",
-    "@org/react-button": "^1.0.1",
+    "@kadira/storybook": "^2.35.3",
     "babel-cli": "^6.23.0",
-    "babel-preset-env": "^1.2.1",
-    "babel-preset-react": "^6.23.0"
-  },
-  "license": "ISC"
+    "babel-jest": "^19.0.0",
+    "babel-preset-react-app": "^2.2.0",
+    "jest": "^19.0.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-test-renderer": "^15.4.2"
+  }
 }
