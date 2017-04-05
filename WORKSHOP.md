@@ -14,7 +14,7 @@ mkdir /tmp/demo-package
 cd /tmp/demo-package
 
 # Than create a new package
-npm init --scope=org -y
+npm init --scope=sipgate -y
 
 # Add the index.js
 cat >> index.js << EOF
@@ -95,6 +95,7 @@ npm version patch
 npm publish
 ```
 
+
 Use your package everywhere
 ---------------------------
 
@@ -106,10 +107,10 @@ npm install -g create-react-app
 cd /tmp
 create-react-app demo-website
 cd demo-website/
-npm install --save @org/demo-package
+npm install --save @sipgate/demo-package
 
 # Edit the src/App.js and import your package
-#   import log from '@org/demo-package';
+#   import log from '@sipgate/demo-package';
 # and add a componentWillMount function to the class
 #   componentWillMount() {
 #     log();
@@ -121,4 +122,128 @@ npm start
 
 # Have a look at the console
 # > The answer is 42
+```
+
+
+Build a react-example-button
+----------------------------
+
+```bash
+# Initialize the repository
+yarn
+
+# Create react-example-button
+yarn create-component react-example-button
+
+# Style the button
+editor -O packages/react-example-button/src/*
+
+# View your component
+yarn styleguide
+
+# Commit when you are done
+git add packages/react-example-button
+git commit -m'Add react-example-button'
+
+# Release the new component
+yarn release
+```
+
+Need some style?
+```jsx
+const style = {
+  background: '#009ee3',
+  border: 'none',
+  boxShadow: 'none',
+  color: 'white',
+  fontSize: '20px',
+  fontWeight: '700',
+  lineHeight: '28px',
+  padding: '10px 20px',
+  textShadow: 'none',
+};
+```
+
+
+Build a react-example-header
+----------------------------
+
+```bash
+# Create react-example-header
+yarn create-component react-example-header
+
+# Add a logo or something like that
+editor -O packages/react-example-header/src/*
+
+# View your component
+yarn styleguide
+
+# Commit when you are done
+git add packages/react-example-header
+git commit -m'Add react-example-header'
+
+# Release the new component
+yarn release
+```
+
+Need some style?
+```jsx
+const style = {
+  container: {
+    boxShadow: '0 2px 2px rgba(0, 0, 0, 0.1)',
+    display: 'block',
+    padding: '5px 13px',
+    marginBottom: '10px',
+  },
+  logo: {
+    height: '39px',
+    marginLeft: '13px',
+    width: 'auto',
+    display: 'block',
+    lineHeight: '78px',
+  },
+};
+```
+
+
+Use create-react-app to bootstrap a new website
+-----------------------------------------------
+
+```bash
+# Create a new folder
+mkdir websites
+cd websites
+
+# Create a new website
+create-react-app www.example.com
+cd www.example.com/
+
+# Install our packages
+yarn add @sipgate/react-example-button @sipgate/react-example-header
+
+# Edit the src/App.js and import your packages
+#   import Button from '@sipgate/react-example-button';
+#   import Header from '@sipgate/react-example-header';
+# and play around with render()
+editor src/App.js
+
+# Now start your website
+npm start
+# > You should see your header and your button
+```
+
+
+Now let's introduce a breaking change
+-------------------------------------
+
+```bash
+# Update the example button and make some breaking changes
+editor -O packages/react-example-button/src/*
+
+# Commit when you are done
+git add packages/react-example-button
+git commit -m'Breaking change'
+
+# Release the new component and increase the major version
+yarn release
 ```
