@@ -15,7 +15,6 @@
     "react": "^15.0.0"
   },
   "devDependencies": {
-    "@kadira/storybook": "^2.35.3",
     "babel-cli": "^6.23.0",
     "babel-jest": "^19.0.0",
     "babel-preset-react-app": "^2.2.0",
