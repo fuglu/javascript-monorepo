@@ -5,12 +5,13 @@
     "create-app": "cd websites && create-react-app --",
     "create-component": "create-react-component --scope org --base-path packages --template-path templates/react-component-template --",
     "diff": "lerna diff --",
-    "lint": "eslint --ext .js --ext .jsx packages",
-    "postinstall": "cd node_modules/lerna && yarn && cd ../.. && lerna bootstrap",
-    "release": "yarn lint && yarn test && lerna publish",
+    "lint": "eslint --ext .js --ext .jsx .",
+    "postinstall": "yarn lernaCompileHack && lerna bootstrap",
+    "release": "yarn lernaCompileHack && yarn lint && yarn test && lerna publish",
     "styleguide": "styleguidist server",
     "test": "lerna run test",
-    "updated": "lerna updated"
+    "updated": "lerna updated",
+    "lernaCompileHack": "cd node_modules/lerna && yarn"
   },
   "dependencies": {
     "@fuglu/create-react-component": "^1.0.1",
