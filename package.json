@@ -5,7 +5,7 @@
     "create-app": "cd websites && create-react-app --",
     "create-component": "create-react-component --scope org --base-path packages --template-path templates/react-component-template --",
     "diff": "lerna diff --",
-    "lint": "eslint --ext .js --ext .jsx .",
+    "lint": "eslint --ext .js --ext .jsx packages",
     "postinstall": "yarn lernaCompileHack && lerna bootstrap",
     "release": "yarn lernaCompileHack && yarn lint && yarn test && lerna publish",
     "styleguide": "styleguidist server",
