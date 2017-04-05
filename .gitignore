@@ -4,6 +4,7 @@
 .tags
 .yarnclean
 dist
+lerna-debug.log
 node_modules
 npm-debug.log*
 yarn-debug.log*
