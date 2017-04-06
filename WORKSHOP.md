@@ -35,6 +35,35 @@ npm publish
 ```
 
 
+Use your package everywhere
+---------------------------
+
+```bash
+# Install create-react-app
+npm install -g create-react-app
+
+# Create a new app
+cd /tmp
+create-react-app demo-website
+cd demo-website/
+npm install --save @sipgate/demo-package
+
+# Edit the src/App.js and import your package
+#   import log from '@sipgate/demo-package';
+# and add a componentWillMount function to the class
+#   componentWillMount() {
+#     log();
+#   }
+editor src/App.js
+
+# Now start your website
+npm start
+
+# Have a look at the console
+# > The answer is 42
+```
+
+
 Add Babel
 ---------
 
@@ -93,35 +122,6 @@ npm version patch
 
 # Publish the new version
 npm publish
-```
-
-
-Use your package everywhere
----------------------------
-
-```bash
-# Install create-react-app
-npm install -g create-react-app
-
-# Create a new app
-cd /tmp
-create-react-app demo-website
-cd demo-website/
-npm install --save @sipgate/demo-package
-
-# Edit the src/App.js and import your package
-#   import log from '@sipgate/demo-package';
-# and add a componentWillMount function to the class
-#   componentWillMount() {
-#     log();
-#   }
-editor src/App.js
-
-# Now start your website
-npm start
-
-# Have a look at the console
-# > The answer is 42
 ```
 
 
