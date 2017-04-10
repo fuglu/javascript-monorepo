@@ -1,3 +1,6 @@
+export { default as connectTodos } from './Connector';
+export { default as PropTypes } from './PropTypes';
+
 export const ADD_TODO = 'ADD_TODO';
 
 export const addTodo = todo => ({
