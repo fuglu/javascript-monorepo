@@ -8,7 +8,7 @@
     "lint": "eslint --ext .js --ext .jsx packages",
     "postinstall": "yarn lernaCompileHack && lerna bootstrap",
     "release": "yarn lernaCompileHack && yarn lint && yarn test && lerna publish",
-    "styleguide": "styleguidist server",
+    "styleguide": "styleguidist server --config .styleguide.config.js",
     "test": "lerna run test",
     "updated": "lerna updated",
     "lernaCompileHack": "cd node_modules/lerna && yarn"
