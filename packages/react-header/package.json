@@ -1,6 +1,6 @@
 {
   "name": "@org/react-header",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "scripts": {
     "build": "NODE_ENV=production babel src -d dist",
@@ -9,8 +9,8 @@
     "test": "NODE_ENV=test jest src"
   },
   "dependencies": {
-    "@org/react-avatar": "^1.0.2",
-    "@org/react-button": "^1.0.2"
+    "@org/react-avatar": "^1.0.3",
+    "@org/react-button": "^1.0.3"
   },
   "peerDependencies": {
     "react": "^15.0.0"
