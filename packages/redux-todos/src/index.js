@@ -1,20 +1,8 @@
+import { ADD_TODO } from './constants';
+export { default as actions } from './actions';
+export { default as constants } from './constants';
 export { default as connectTodos } from './Connector';
 export { default as PropTypes } from './PropTypes';
-
-export const ADD_TODO = 'ADD_TODO';
-
-export const addTodo = todo => ({
-  type: ADD_TODO,
-  todo,
-});
-
-export const types = {
-  ADD_TODO,
-};
-
-export const actions = {
-  addTodo,
-};
 
 export default (state = [], action) => {
   switch (action.type) {
